@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figma Inspired Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+
+<header>
+    <div class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma Logo"></div>
+    <nav class="nav-menu">
+        <a href="#">Products</a>
+        <a href="#">Solutions</a>
+        <a href="#">Community</a>
+        <a href="#">Resources</a>
+        <a href="#" class="no-arrow">Pricing</a>
+        <a href="#" class="no-arrow">Contact Sales</a>
+    </nav>
+    <div class="right-menu">
+        <a href="#">Login</a>
+        <button class="button" onclick="showLoginPage()">Get Started</button>
+    </div>
+</header>
+
+
+
+<section class="main-section">
+    <h1>How you <span class="highlight">design</span>, align, and <span class="highlight">build</span> matters. Do it together with <span class="highlight">Figma</span>.</h1>
+    <button class="button" onclick="showLoginPage()">Get Started</button>
+</section>
+
+
+
+<div class="overlay" id="overlay" onclick="hideLoginPage()"></div>
+<section class="login-page" id="loginPage">
+    <span class="close-icon" onclick="hideLoginPage()">&times;</span>
+   
+    <div class="social-login">
+        <button>
+            <img src="https://static-00.iconduck.com/assets.00/google-icon-2048x2048-tmg5cp5v.png"></i> Continue with Google
+        </button>
+    </div>
+    <h5>or</h5>
+
+
+    <form>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <label class="checkbox">
+            <input type="checkbox"> Subscribe for Figma updates*
+        </label>
+        <button class="login-button" type="submit">Create Account</button>
+    </form>
+
+
+    <p class="tos">
+        By clicking "Create account" or "Continue with Google", you agree to the <span class="blue">Figma TOS</span> and <span class="blue">Privacy Policy</span>.<br>
+    <p class="tos1">*By opting in, you are consenting to receive product, service, and event updates from Figma. You can unsubscribe at any time.
+    </p>
+    <p class="tos2">Use single sign-on</p>
+    <p class="tos3">Already have an account?<span class="blue">Log in</span></p>
+
+</section>
+
+
+<script>
+    function showLoginPage() {
+        document.querySelector('.main-section').style.opacity = '0.8';
+        document.querySelector('header').style.opacity = '0.8';
+        document.getElementById('overlay').style.display = 'block';
+        document.getElementById('loginPage').style.display = 'block';
+    }
+
+    function hideLoginPage() {
+        document.querySelector('.main-section').style.opacity = '5';
+        document.querySelector('header').style.opacity = '5';
+        document.getElementById('overlay').style.display = 'none';
+        document.getElementById('loginPage').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
+
